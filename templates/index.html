@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; background-color: #f4f4f9; }
+        .container { max-width: 600px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); margin: auto; }
+        h2 { color: #333; }
+        label { font-weight: bold; display: block; margin-top: 15px; }
+        input, textarea, button { width: 100%; margin-top: 5px; padding: 10px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
+        button { background-color: #007BFF; color: white; border: none; font-size: 16px; cursor: pointer; margin-top: 20px; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📄 AI Resume Analyzer</h2>
+    <p>upload CV and match with job description!</p>
+    
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
+        <label>Job Description:</label>
+        <textarea name="jd" rows="4" placeholder="Paste Job Description here..." required></textarea>
+
+        <label>Upload Resume (PDF only):</label>
+        <input type="file" name="resume" accept=".pdf" required>
+
+        <button type="submit">Analyze Now </button>
+    </form>
+</div>
+</body>
+</html>
